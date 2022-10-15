@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --fundo: rgba(30, 30, 30, 30);
+    --cabecario: rgb(40, 40, 40);
+    --cor:white;
+    --sombra:0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+body{
+    background-color: var(--fundo);
+    height: 900vh;
+}
+body::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+    background-color: rgba(15, 15, 15, 0.233);
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 1, 14, 0.733);
+    border-radius: 0px;
+}
+.header-top{
+    background-color: rgba(40, 40, 40, 0.938);
+    padding: 10px;
+    color: var(--cor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top .ancoras{
+    display: flex;
+    align-items: center;
+}
+.header-top .ancoras button{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid rgb(2, 51, 1);
+    background-color: green;
+    color:var(--cor);
+}
+.header-site{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cabecario);
+    padding: 15px;
+    color: var(--cor);
+}
+.shadow{
+    background-color: rgba(40, 40, 40, 0.863);
+    box-shadow: var(--sombra);
+}
+
+.header-site #menu ul{
+    list-style: none;
+}
+
+.header-site #menu ul{
+   margin-right: 12px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-site #menu ul li{
+    margin-right: 15px;
+}
+.search{
+    transition: 2.5s;
+    width: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+.busca button{
+   position: absolute;
+   cursor: pointer;
+   font-size: 13pt;
+   border: none;
+   background: none;
+   top:24px;
+   background: white;
+   right: 82px;
+}
+.longsearch{
+    transition: 2.5s;
+    width: 300px;
+}
+.btn-menu{
+    display: none;
+}
+.btn-menu{
+    font-size: 24px;
+}
+
+.code{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.config1{
+    display: flex;
+    align-items: center;
+}
+.config1 select{
+    margin-left: 10px;
+    padding: 7px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 150px;
+    background-color: white;
+}
+.phone-config{
+    display: none;
+}
+.code .config{
+    width: 100%;
+    margin: 10px;
+    color: white;
+}
+.config p{
+    font-size: 9pt;
+}
+
+.config .barcode input{
+    padding: 10px;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    width: 500px;
+    outline: none;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+#barwrite,#autobar{
+    width: 210px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+.config .barcode #google{
+    margin-top: 25%;
+}
+.config .qrcode #google{
+    margin-top: 10%;
+}
+.config .qrcode #google textarea{
+    padding: 10px;
+    border: none;
+    background-color: white;
+    box-shadow: var(--sombra);
+    border-radius: 20px;
+    width: 500px;
+    outline: none;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+#qrwrite{
+    width: 210px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+.resultado{
+    margin: 10px;
+    width: 100%;
+    height: 490px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    background-color: white;
+    text-align: center;
+}
+.resultado #code{
+    margin-top: 20px;
+}
+.tamanha{ 
+    margin-top: 20px;   
+    width: 400px;
+    height: 400px;
+}
+#progress{
+    display: none;
+}
+#baixar{
+    text-decoration: none;
+    background-color: var(--fundo);
+    color:white;
+    padding: 7px;
+    border-radius: 20px;
+}
+.header-result{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--sombra);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header-site{
+        position: fixed;
+        width: 100%;
+    }
+    .config .barcode input{
+        width: 100%;
+    }
+    .campos{
+        display: none;
+    }
+    .phone-config{
+        display: flex;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.199);
+        margin-top: 65px;
+    }
+    #barwrite,#autobar{
+        width: 120px;
+    }
+    .config p{
+        max-width:75%
+    }
+    .config .barcode #google{
+        margin-top: 5%;
+    }
+    .phone-config select{
+        width: 230px;
+        padding: 7px;
+        border: none;
+        outline: none;
+        background: white;
+    }
+    .phone-config button{
+        width: 170px;
+        font-size:initial;
+        margin-left: 0px;
+        padding: 7px;
+        border: none;
+        background: none;
+        color:var(--cor);
+        margin:5px;
+        padding:10px;
+        border-radius:20px
+    }
+    .busca button{
+        right: 90px;
+     }
+    .btn-menu{
+        display: block;
+    }
+    .code{
+        width:90%;
+        display: block        
+    }
+    #code{
+        width: 100%;
+    }
+    .longsearch{
+        transition: 2.5s;
+        width: 180px;
+    }
+    .header-top{
+        display: none;
+    }
+    .header-site #menu .menu-menu{
+        display: none;
+    }
+    .sun{
+        display: none;
+    }
+    .resultado{
+        margin: 10px;
+        width: 100%;
+        height: 490px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: var(--sombra);
+        background-color: white;
+        text-align: center;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de codigos</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+<div class="header-top">
+    <div>
+        <h4>Gerador de codigos de barras de QR - Online</h4>
+    </div>
+    <div class="ancoras">
+        <div>
+            <i class='bx bxl-facebook-circle' ></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-instagram-alt'></i>
+            <i class='bx bxl-github'></i>
+        </div>
+        <button>Baixar para <i class='bx bxl-windows'></i></button>
+    </div>
+</div>
+<div class="header-site">
+    <div id="logo">
+        <div class="config1">
+            <div>
+                <h3>Syshard</h3>
+            </div>
+            <div class="campos">
+                <select name="" id="type">
+                    <option value="barcode">Barcode</option>
+                    <option value="qrcode">QRcode</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <div id="menu">
+        <ul>
+          <li>
+            <ul class="menu-menu">
+              <li>Sobre</li>
+              <li>Contactos</li>
+              <li>Projectos</li>
+              <li>Videos</li>
+            </ul>
+          </li>
+          <li class="busca">
+            <form action="" method="get">
+                <input type="text" name="" class="search">
+            </form>
+            <button id="busca"><i class="bx bx-search"></i></button>
+          </li>
+          <li class="sun"><i class='bx bxs-sun' ></i></li>
+          <li class="btn-menu"><i class='bx bx-menu' ></i></li>
+        </ul>
+      </div>
+</div>
+<div class="phone-config">
+    <div>
+        <button onclick="phonebar()">barcode</button>
+    </div>
+    <div>
+        <button onclick="phoneqr()">qrcode</button>
+    </div>
+</div>
+
+<div class="propagana">
+    <div class="code">
+        <div class="config">
+            <div class="barcode">
+                <center id="google">
+                    <h2>Barcode</h2><br>
+                    <p>Lorem ipsum, adipisicing elit. Sapiente quaerat cupiditate, quam rem ad</p>
+                    <input type="text" placeholder="Barcode" id="barcodetext"><br>
+                    <button id="barwrite">Gerar code</button>
+                    <button id="autobar">Auto code</button>
+                </center>
+            </div>
+            <div class="qrcode" style="display: none;">
+                <center id="google">
+                    <h1>QR code</h1>
+                    <textarea name="" id="" cols="90" rows="10"></textarea><br>
+                    <button id="qrwrite" onclick="GerarQRCode()">Escrever o codigo</button>
+                </center>
+            </div>
+        </div>
+        <div class="resultado">
+            <div class="header-result">
+                <div>
+                    <h3>Display code <i class='bx bx-loader-circle bx-spin' id="progress"></i></h3>
+                </div>
+                <div>
+                    <a href="" id="baixar">Baixar codigo gerado <i class="bx bxs-download"></i> </a>
+                </div>
+            </div>
+            <img src="image/PettyWhirlwindCrocodile-max-1mb.gif" id="code" class="qr"/>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
